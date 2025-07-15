@@ -32,7 +32,7 @@ if not gemini_key:
 PDFS_DIR = "./data/pdfs"
 os.makedirs(PDFS_DIR, exist_ok=True)
 
-llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", google_api_key=SecretStr(gemini_key))
+llm = ChatGoogleGenerativeAI(model="gemini-2.5-pro", google_api_key=SecretStr(gemini_key))
 embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001", google_api_key=SecretStr(gemini_key))
 
 # Global retriever instance, initialized to None
