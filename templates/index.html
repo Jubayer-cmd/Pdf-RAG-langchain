@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF-RAG</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <div class="sidebar-header">
+          <h1 class="app-title">PDF-RAG</h1>
+          <p class="app-subtitle">Your AI-Powered Document Assistant</p>
+        </div>
+        <form
+          id="upload-form"
+          action="/upload"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <label for="file-input" class="file-input-label">
+            <span>Select PDF to Process</span>
+          </label>
+          <input
+            type="file"
+            name="file"
+            id="file-input"
+            accept=".pdf"
+            required
+          />
+          <span id="file-name">No file chosen</span>
+        </form>
+        <div id="upload-status"></div>
+      </div>
+      <div class="chat-container">
+        <div id="chat-box">
+          <div class="message assistant">
+            <p>
+              Hello! Select a PDF file and I'll automatically process it for
+              you.
+            </p>
+          </div>
+        </div>
+        <form id="chat-form">
+          <input
+            type="text"
+            id="message-input"
+            placeholder="Ask a question about your PDF..."
+            autocomplete="off"
+          />
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+    <script src="/static/script.js"></script>
+  </body>
+</html>

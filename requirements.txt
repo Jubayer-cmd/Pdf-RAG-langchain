@@ -2,11 +2,11 @@ fastapi
 uvicorn
 langchain
 langchain-google-genai
-google-generativeai
 langchain-community
 langchain-text-splitters
 langchain-chroma
 chromadb
 python-multipart
 python-dotenv
+jinja2
 
